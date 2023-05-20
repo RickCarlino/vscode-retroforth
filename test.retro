@@ -1,0 +1,9 @@
+'hello_world! var
+'wow s:const
+
+{{
+  :foo #123 ;
+  --reveal--
+  :bar .1.23 ;
+}}
+

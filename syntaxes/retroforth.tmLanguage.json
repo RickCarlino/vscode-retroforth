@@ -3,26 +3,21 @@
   "autoClosingPairs": [
     { "open": "[", "close": "]" },
     { "open": "{", "close": "}" },
-    { "open": "\"", "close": "", "notIn": ["string", "comment"] },
     { "open": "(", "close": ")", "notIn": ["string", "comment"] }
   ],
   "patterns": [
-    {
-      "name": "keyword.control.retroforth",
-      "match": "\\b({{|--reveal---|}}|[\\[\\]]|{|}|;|repeat|again|,|const|double:const|double:var|FALSE|I|J|K|s,|s:const|TRUE|var|var-n|var-s)\\b"
-    },
     {
       "name": "constant.numeric.integer.retroforth",
       "match": "#\\d+"
     },
     {
       "name": "constant.numeric.float.retroforth",
-      "match": "\\.\\d+"
+      "match": "\\.\\d+\\.?\\d*"
     },
     {
       "name": "string.quoted.single.retroforth",
       "begin": "'",
-      "end": "'",
+      "end": "(?<!\\\\)'",
       "patterns": [
         {
           "name": "constant.character.escape.retroforth",
@@ -40,11 +35,19 @@
     },
     {
       "name": "keyword.operator.word-definition.retroforth",
-      "match": ":\\w+"
+      "begin": ":\\w+",
+      "end": ";",
+      "contentName": "meta.definition.retroforth",
+      "patterns": [{ "include": "#self" }]
     },
     {
       "name": "comment.line.retroforth",
-      "match": "\\(.*\\)"
+      "begin": "\\(",
+      "end": "\\)"
+    },
+    {
+      "name": "keyword.control.retroforth",
+      "match": "\\b({{|--reveal---|}}|[\\[\\]]|{|}|;|repeat|again|,|const|double:const|double:var|FALSE|I|J|K|s,|s:const|TRUE|var|var-n|var-s)\\b"
     }
   ],
   "scopeName": "source.retroforth"

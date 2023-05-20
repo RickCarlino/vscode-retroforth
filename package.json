@@ -2,8 +2,8 @@
   "name": "retroforth",
   "displayName": "RetroForth",
   "description": "Syntax highlighting for RetroForth",
-  "version": "0.0.1",
-  "publisher": "Your Name",
+  "version": "0.0.2",
+  "publisher": "Rick Carlino",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -27,17 +27,6 @@
           ".ilo"
         ],
         "configuration": "./language-configuration.json"
-      },
-      {
-        "id": "unu",
-        "aliases": [
-          "Unu",
-          "unu"
-        ],
-        "extensions": [
-          ".unu"
-        ],
-        "configuration": "./unu-configuration.json"
       }
     ]
   }
