@@ -1,0 +1,31 @@
+{
+    "fileTypes": ["unu"],
+    "name": "Unu",
+    "patterns": [
+      {
+        "include": "text.html.markdown"
+      },
+      {
+        "begin": "```retro",
+        "end": "```",
+        "contentName": "source.retroforth",
+        "patterns": [
+          {
+            "include": "source.retroforth"
+          }
+        ]
+      },
+      {
+        "begin": "~~~retro-test",
+        "end": "~~~",
+        "contentName": "source.retroforth",
+        "patterns": [
+          {
+            "include": "source.retroforth"
+          }
+        ]
+      }
+    ],
+    "scopeName": "source.unu"
+  }
+  

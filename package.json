@@ -1,0 +1,44 @@
+{
+  "name": "retroforth",
+  "displayName": "RetroForth",
+  "description": "Syntax highlighting for RetroForth",
+  "version": "0.0.1",
+  "publisher": "Your Name",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "retroforth",
+        "aliases": [
+          "RetroForth",
+          "retroforth",
+          "retro",
+          "Retro",
+          "Ilo",
+          "ilo"
+        ],
+        "extensions": [
+          ".retro",
+          ".ilo"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "unu",
+        "aliases": [
+          "Unu",
+          "unu"
+        ],
+        "extensions": [
+          ".unu"
+        ],
+        "configuration": "./unu-configuration.json"
+      }
+    ]
+  }
+}
